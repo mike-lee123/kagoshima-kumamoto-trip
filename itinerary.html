@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行程推薦｜鹿兒島 × 熊本旅遊</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tabs 額外樣式 */
+        .tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .tab {
+            padding: 12px 20px;
+            background: #e7f2ff;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        .tab.active {
+            background: #8EC5FC;
+            color: white;
+        }
+        .tab:hover {
+            opacity: 0.85;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .day-card {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+        .day-card h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 導覽列 -->
+<header>
+    <div class="logo">南九州旅遊指南</div>
+    <nav>
+        <a href="index.html">首頁</a>
+        <a href="kagoshima.html">鹿兒島</a>
+        <a href="kumamoto.html">熊本</a>
+        <a href="transport.html">交通</a>
+        <a href="food.html">美食</a>
+        <a href="itinerary.html">行程推薦</a>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" style="
+background-image: linear-gradient(to right, #8EC5FC90, #E0C3FC90),
+url('images/itinerary-banner.jpg');
+">
+    <h1>行程推薦</h1>
+    <p>3、4、5 天行程任你選，輕鬆玩南九州！</p>
+</section>
+
+<!-- Tabs -->
+<section>
+    <h2>選擇你的旅遊天數</h2>
+
+    <div class="tabs">
+        <div class="tab active" data-tab="d3">3 日輕鬆行程</div>
+        <div class="tab" data-tab="d4">4 日深度行程</div>
+        <div class="tab" data-tab="d5">5 日完整巡遊</div>
+    </div>
+
+    <!-- 3 日行程 -->
+    <div id="d3" class="tab-content active">
+
+        <div class="day-card">
+            <h3>DAY 1｜鹿兒島市區 & 櫻島火山</h3>
+            <ul>
+                <li>天文館通商店街散步</li>
+                <li>搭渡輪前往櫻島火山</li>
+                <li>湯之平展望所看夕陽</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <h3>DAY 2｜霧島神宮 → 指宿沙浴</h3>
+            <ul>
+                <li>霧島神宮（森林浴 + 鳥居）</li>
+                <li>指宿天然沙浴體驗</li>
+                <li>溫泉旅館入住</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <h3>DAY 3｜熊本城 & 商店街</h3>
+            <ul>
+                <li>JR 移動至熊本</li>
+                <li>熊本城 + 武將隊表演</li>
+                <li>上通・下通商店街美食</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- 4 日行程 -->
+    <div id="d4" class="tab-content">
+
+        <div class="day-card">
+            <h3>DAY 1｜鹿兒島市區漫遊</h3>
+            <ul>
+                <li>城山展望台看櫻島</li>
+                <li>鹿兒島水族館</li>
+                <li>天文館通吃黑豚豬排</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <h3>DAY 2｜櫻島火山半日遊</h3>
+            <ul>
+                <li>湯之平展望所</li>
+                <li>火山口周邊健走</li>
+                <li>回市區吃白熊冰</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <h3>DAY 3｜移動至熊本 → 熊本城</h3>
+            <ul>
+                <li>新幹線 45 分鐘抵達</li>
+                <li>熊本城天守閣參觀</li>
+                <li>熊本熊廣場購物</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <h3>DAY 4｜黑川溫泉一日放鬆</h3>
+            <ul>
+                <li>租車前往阿蘇山區</li>
+                <li>黑川溫泉湯屋巡禮</li>
+                <li>回熊本品嚐拉麵</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- 5 日行程 -->
+    <div id="d5" class="tab-content">
+
+        <div class="day-card">
+            <h3>DAY 1｜鹿兒島市區漫遊</h3>
+            <ul>
+                <li>天文館通 → 白熊冰</li>
+                <li>照國神社</li>
+                <li>晚餐吃黑豚豬排</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <h3>DAY 2｜櫻島火山一日遊</h3>
+            <ul>
+                <li>搭船前往櫻島</li>
+                <li>烏島展望台</li>
+                <li>火山溫泉足浴</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <h3>DAY 3｜霧島神宮 → 指宿沙浴</h3>
+            <ul>
+                <li>霧島神宮森林步道</li>
+                <li>指宿沙浴</li>
+                <li>入住海景溫泉旅館</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <h3>DAY 4｜熊本城 & 熊本熊廣場</h3>
+            <ul>
+                <li>JR 移動至熊本</li>
+                <li>熊本城天守閣</li>
+                <li>熊本熊廣場表演（若遇到）</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <h3>DAY 5｜阿蘇火山 & 黑川溫泉</h3>
+            <ul>
+                <li>阿蘇火山口散策</li>
+                <li>黑川溫泉湯屋巡禮</li>
+                <li>傍晚返回熊本市區</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    南九州旅遊網站 © 2025 | Kagoshima × Kumamoto Travel Guide
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+/* Tabs 切換邏輯 */
+document.querySelectorAll(".tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+        document.querySelector(".tab.active").classList.remove("active");
+        tab.classList.add("active");
+
+        document.querySelector(".tab-content.active").classList.remove("active");
+        document.getElementById(tab.dataset.tab).classList.add("active");
+    });
+});
+</script>
+
+</body>
+</html>

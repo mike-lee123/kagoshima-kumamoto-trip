@@ -1,0 +1,138 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap');
+
+/* 全域設定 */
+body {
+    margin: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #ffffff;
+    color: #555;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+/* Header 導覽列 */
+header {
+    background: #8EC5FC;
+    background: linear-gradient(120deg, #8EC5FC, #E0C3FC);
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+header .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav a {
+    margin-left: 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* Hero 區塊 */
+.hero {
+    height: 80vh;
+    color: white;
+    text-align: center;
+    background: linear-gradient(to right, #8EC5FC90, #E0C3FC90),
+                url('images/banner.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #fff;
+    color: #666;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffe6f2;
+}
+
+/* Section Layout */
+section {
+    padding: 60px 10%;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+/* 卡片 Grid Layout */
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+    background: #fff;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #8EC5FC;
+    color: white;
+    margin-top: 50px;
+}
+
+/* RWD */
+@media(max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    header nav { display: none; }
+}
